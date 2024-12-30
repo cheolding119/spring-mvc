@@ -11,14 +11,14 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "memberServiceServlet",urlPatterns = "/servlet/members/save")
-public class MemberServiceServlet extends HttpServlet {
+@WebServlet(name = "memberSaveServlet",urlPatterns = "/servlet/members/save")
+public class MemberSaveServlet extends HttpServlet {
 
     MemberRepository memberRepository = MemberRepository.getInstance();
 
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println("MemberServiceServlet.service");
+        System.out.println("MemberSaveServlet.service");
         String username = request.getParameter("username");
         int age = Integer.parseInt(request.getParameter("age"));
 

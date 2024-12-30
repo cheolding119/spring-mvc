@@ -12,7 +12,6 @@ public class ServletApplication {
 
 	public static void main(String[] args) {
 
-		Scanner scanner = new Scanner(System.in);
 
 		SpringApplication.run(ServletApplication.class, args);
 

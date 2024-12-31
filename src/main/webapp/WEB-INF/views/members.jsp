@@ -1,5 +1,8 @@
+<%@ page import="hello.servlet.domain.member.Member" %>
+<%@ page import="java.util.List" %>
+<%@ page import="hello.servlet.domain.member.MemberRepository" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 
 <html>
 <head>
@@ -16,6 +19,8 @@
     </thead>
     <tbody>
     <%
+        MemberRepository memberRepository = MemberRepository.getInstance();
+        List<Member>members= memberRepository.findAll();
         for (Member member : members) {
             out.write(" <tr>");
             out.write(" <td>" + member.getId() + "</td>");
